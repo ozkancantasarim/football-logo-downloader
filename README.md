@@ -13,6 +13,31 @@ A lightweight Windows utility built for designers who need football club logos q
 
 **[Download Latest Release](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)**
 
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="assets/screenshot-tr.png" alt="Turkish Interface">
+      <br>
+      <b>Turkish Interface</b>
+    </td>
+    <td width="50%" align="center">
+      <img src="assets/screenshot-en.png" alt="English Interface">
+      <br>
+      <b>English Interface</b>
+    </td>
+  </tr>
+</table>
+
+### Download Process
+
+<img src="assets/downloading.png" alt="Downloading football logos">
+
+### Download Result
+
+<img src="assets/download-result.png" alt="Downloaded SVG football logos">
+
 </div>
 
 ---
