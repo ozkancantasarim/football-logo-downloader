@@ -1,0 +1,21 @@
+THIRD-PARTY NOTICE
+
+Football Logo Downloader v1.0.2
+
+This package contains downloader code only. It does not include football club,
+competition, federation, or league logo files.
+
+Logo/data source:
+FootyLogos.com
+
+This project is not affiliated with, endorsed by, sponsored by, or officially
+connected with FootyLogos.
+
+Club, competition, federation and league names, logos and trademarks remain
+the property of their respective rights holders.
+
+Download availability does not constitute a license to use any third-party
+logo, trademark, badge, crest, or other protected mark.
+
+For information about logo usage and rights:
+https://www.footylogos.com/logo-usage-right
