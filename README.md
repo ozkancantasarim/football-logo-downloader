@@ -36,7 +36,7 @@ A lightweight Windows utility built for designers who need football club logos q
 
 ### Download Result
 
-<img src="assets/download-result.png" alt="Downloaded SVG football logos">
+<img src="assets/downloading-result.png" alt="Downloaded SVG football logos">
 
 </div>
 
