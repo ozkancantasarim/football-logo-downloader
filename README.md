@@ -134,7 +134,7 @@ Free code signing provided by [SignPath.io](https://signpath.io/), certificate b
 
 ### Project roles
 
-- **Committer:** Özkan Can
+- **Author:** Özkan Can
 - **Reviewer:** Özkan Can
 - **Approver:** Özkan Can
 
