@@ -126,6 +126,28 @@ For details:
 Official release builds include a `SHA256SUMS.txt` file for integrity verification.
 
 ---
+## Code signing policy
+
+Official releases of Football Logo Downloader are intended to be code signed through SignPath.
+
+Free code signing provided by [SignPath.io](https://signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+### Project roles
+
+- **Committer:** Özkan Can
+- **Reviewer:** Özkan Can
+- **Approver:** Özkan Can
+
+Only binaries built from the official source repository are eligible for signing.
+
+Repository:
+https://github.com/ozkancantasarim/football-logo-downloader
+
+Every release must originate from the official repository and its documented build process before it can be submitted for code signing.
+
+See the [Privacy Policy](PRIVACY.md) for information about network communication and user data.
+
+---
 
 ## Verify a Download
 
