@@ -76,7 +76,7 @@ jobs:
           subject-path: release/Football-Logo-Downloader-v2.0.0-win-x64.zip
 
       - name: Upload Windows build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: Football-Logo-Downloader-v2.0.0-win-x64
           path: release/*
