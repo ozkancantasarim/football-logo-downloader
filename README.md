@@ -18,6 +18,33 @@ A lightweight Windows desktop application built for designers who need football 
 
 </div>
 
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="assets/screenshots/screenshot-dark-en.png" alt="Football Logo Downloader dark theme">
+      <br>
+      <b>Dark Theme</b>
+    </td>
+    <td width="50%" align="center">
+      <img src="assets/screenshots/screenshot-light-en.png" alt="Football Logo Downloader light theme">
+      <br>
+      <b>Light Theme</b>
+    </td>
+  </tr>
+</table>
+
+### Download Process
+
+<img src="assets/screenshots/screenshot-download.png" alt="Football Logo Downloader downloading SVG logos">
+
+### Download Result
+
+<img src="assets/screenshots/screenshot-download-result.png" alt="Downloaded football SVG logos">
+
+---
+
 ---
 
 ## Features
