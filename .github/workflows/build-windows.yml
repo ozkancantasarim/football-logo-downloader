@@ -1,0 +1,84 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "src/**"
+      - "global.json"
+      - "THIRD_PARTY_NOTICE.txt"
+      - "LICENSE"
+      - "DISTRIBUTION_README.txt"
+      - "SECURITY.md"
+      - ".github/workflows/build-windows.yml"
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore
+        shell: pwsh
+        run: dotnet restore "src/FootballLogoDownloader/FootballLogoDownloader.csproj"
+
+      - name: Audit NuGet dependencies
+        shell: pwsh
+        run: dotnet list "src/FootballLogoDownloader/FootballLogoDownloader.csproj" package --vulnerable --include-transitive
+
+      - name: Publish self-contained Windows app
+        shell: pwsh
+        run: |
+          dotnet publish "src/FootballLogoDownloader/FootballLogoDownloader.csproj" `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            --no-restore `
+            -o "publish"
+
+      - name: Generate SHA-256 checksum
+        shell: pwsh
+        run: |
+          $exe = "publish/Football Logo Downloader.exe"
+          $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $exe).Hash.ToLowerInvariant()
+          "$hash  Football Logo Downloader.exe" | Set-Content -Encoding ascii "publish/SHA256SUMS.txt"
+
+      - name: Prepare release assets
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "release" | Out-Null
+          Copy-Item "publish/Football Logo Downloader.exe" "release/Football Logo Downloader.exe"
+          Copy-Item "publish/LICENSE.txt" "release/LICENSE.txt"
+          Copy-Item "publish/THIRD_PARTY_NOTICE.txt" "release/THIRD_PARTY_NOTICE.txt"
+          Copy-Item "publish/SHA256SUMS.txt" "release/SHA256SUMS.txt"
+          Copy-Item "publish/README.txt" "release/README.txt"
+          Compress-Archive `
+            -Path "publish/Football Logo Downloader.exe", "publish/LICENSE.txt", "publish/THIRD_PARTY_NOTICE.txt", "publish/SHA256SUMS.txt", "publish/README.txt" `
+            -DestinationPath "release/Football-Logo-Downloader-v2.0.0-win-x64.zip" `
+            -Force
+
+      - name: Generate build provenance attestation
+        uses: actions/attest@v4
+        with:
+          subject-path: release/Football-Logo-Downloader-v2.0.0-win-x64.zip
+
+      - name: Upload Windows build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Football-Logo-Downloader-v2.0.0-win-x64
+          path: release/*
+          if-no-files-found: error
+          retention-days: 30

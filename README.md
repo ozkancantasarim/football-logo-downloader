@@ -1,231 +1,176 @@
 <div align="center">
 
-# ⚽ Football Logo Downloader
+<img src="src/FootballLogoDownloader/Assets/fld-logo.png" alt="Football Logo Downloader" width="140">
 
-**Download available football club logos in SVG format by country and league.**
+# Football Logo Downloader
+
+**Download available football club and competition logos in SVG format by country and league.**
 
 [![Latest Release](https://img.shields.io/github/v/release/ozkancantasarim/football-logo-downloader?style=for-the-badge)](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)
-![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![SVG](https://img.shields.io/badge/Format-SVG-FFB13B?style=for-the-badge&logo=svg&logoColor=white)
-![Languages](https://img.shields.io/badge/UI-Türkçe%20%7C%20English-222222?style=for-the-badge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A lightweight Windows utility built for designers who need football club logos quickly, without searching and downloading them one by one.
+A lightweight Windows desktop application built for designers who need football logos quickly without searching for and downloading them one by one.
 
-**[Download Latest Release](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)**
-
-## 📸 Screenshots
-
-<table>
-  <tr>
-    <td width="50%" align="center">
-      <img src="assets/screenshot-tr.png" alt="Turkish Interface">
-      <br>
-      <b>Turkish Interface</b>
-    </td>
-    <td width="50%" align="center">
-      <img src="assets/screenshot-en.png" alt="English Interface">
-      <br>
-      <b>English Interface</b>
-    </td>
-  </tr>
-</table>
-
-### Download Process
-
-<img src="assets/downloading.png" alt="Downloading football logos">
-
-### Download Result
-
-<img src="assets/downloading-result.png" alt="Downloaded SVG football logos">
+**[Download the latest release](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)**
 
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌍 **Country → league selection**
-- ⚽ Downloads logos only for the **selected league**
-- 🖼️ Downloads available logos in **SVG vector format**
-- 🇹🇷 🇬🇧 **Turkish and English interface**
-- 🔤 Full Unicode filename support  
-  `Beşiktaş`, `Malmö FF`, `Lech Poznań`, `Žalgiris`, etc.
-- 📁 Clean **country + league** folder naming
-- ♻️ Existing valid SVG files are automatically skipped
-- 🔑 **No API key required**
-- ⏳ Visible loading state during initial data loading
-- 🪟 Built for **Windows 10 / Windows 11**
-
----
-
-## 📁 Folder Naming
-
-Downloaded league folders are created with clear names such as:
-
-```text
-Türkiye Süper Lig
-İspanya LA LIGA
-Almanya Bundesliga 2
-Litvanya A Lyga
-İngiltere Premier League
-```
-
-Club logos are saved using their original club names whenever possible:
-
-```text
-Beşiktaş.svg
-Fenerbahçe.svg
-Galatasaray.svg
-Malmö FF.svg
-Lech Poznań.svg
-Žalgiris.svg
-```
+- Country → league / competition selection
+- Downloads available logos in **SVG vector format**
+- **Turkish and English** interface
+- **Dark, light and system** appearance modes
+- Full Unicode filename support (`Beşiktaş`, `Malmö FF`, `Lech Poznań`, `Žalgiris`, etc.)
+- Clean country + competition folder naming
+- Existing valid SVG files are skipped automatically
+- Download progress, status and detailed results
+- Open the completed download folder directly from the application
+- Remembers language, theme, output folder and recent selections locally
+- **No API key, account or sign-in required**
+- No administrator privileges required
+- Standalone Windows executable; no PowerShell/BAT/VBS is used by the released application
 
 ---
 
-## 🚀 Installation
+## Download & Installation
 
 1. Open the **[Releases](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)** page.
-2. Download the latest ZIP package.
-3. Extract the ZIP to a folder.
-4. Run:
+2. Download either:
+   - `Football Logo Downloader.exe` for the standalone application, or
+   - `Football-Logo-Downloader-v2.0.0-win-x64.zip` for the packaged release.
+3. If you downloaded the ZIP, extract it first.
+4. Run `Football Logo Downloader.exe`.
 
-```text
-Football Logo Downloader v1.0.2.bat
-```
+No setup wizard, API key or separate .NET installation is required for the published self-contained build.
 
-5. Wait a few seconds while the initial country data loads.
-6. Choose your language, country and league.
-7. Select a download folder.
-8. Click **Download SVG Logos / SVG Logoları İndir**.
-
-> No installation wizard or API key is required.
+> **Windows SmartScreen:** Until Authenticode signing is enabled for official releases, Windows may display an “Unknown publisher” warning. Verify downloads using the published SHA-256 checksum and only download releases from this repository.
 
 ---
 
-## 🖥️ How It Works
+## How to Use
 
 ```text
-Choose language
-      ↓
+Choose language / appearance
+          ↓
 Choose country
-      ↓
+          ↓
 Choose league / competition
-      ↓
+          ↓
 Choose download folder
-      ↓
+          ↓
 Download SVG Logos
+          ↓
+Open Folder
 ```
 
-The application downloads only the league selected by the user instead of downloading an entire logo database.
+The application downloads only the competition selected by the user instead of downloading an entire logo database.
 
 ---
 
-## ✅ Requirements
+## Requirements
 
-- Windows 10 or Windows 11
-- Windows PowerShell 5.1+
+- Windows 10 or Windows 11 (64-bit)
 - Internet connection
 
-The interface is built with Windows Forms and is currently intended for Windows.
+The official release is published as a self-contained `win-x64` executable.
 
 ---
 
-## 🛡️ Windows Security Notice
+## Security & Privacy
 
-Football Logo Downloader is currently distributed as a **PowerShell script + BAT launcher** and is **not digitally signed**.
+Football Logo Downloader is designed as a non-privileged desktop utility. It does not require administrator rights, does not open a local server, and does not require or store passwords, API keys or account credentials.
 
-Because of this, Windows SmartScreen or antivirus software may occasionally display a warning.
+Downloaded SVG content is validated before it is saved. Network requests are restricted to HTTPS FootyLogos endpoints and use the normal Windows/.NET certificate validation stack.
 
-The source files are included in the repository so they can be inspected before running.
+The application contains no telemetry or analytics. User preferences are stored locally on the computer.
 
----
+For details:
 
-## 🔄 Updating
+- [Security Policy](SECURITY.md)
+- [Privacy Policy](PRIVACY.md)
+- [Security Engineering Review](SECURITY_REVIEW.md)
 
-When a newer version is released:
-
-1. Visit **[Latest Release](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)**.
-2. Download the newest ZIP.
-3. Extract it to a new folder.
-4. Run the new version.
+Official release builds include a `SHA256SUMS.txt` file for integrity verification.
 
 ---
 
-## 🌐 Source & Third-Party Rights
+## Verify a Download
 
-Logo/data source used by the downloader:
+After downloading an official release, compare the SHA-256 value of the EXE with `SHA256SUMS.txt`.
 
-**[FootyLogos.com](https://www.footylogos.com/)**
+PowerShell example:
 
-This project is **not affiliated with, endorsed by, sponsored by, or officially connected with FootyLogos**.
+```powershell
+Get-FileHash -Algorithm SHA256 ".\Football Logo Downloader.exe"
+```
 
-Football club, federation, league and competition names, logos, badges, crests and trademarks remain the property of their respective rights holders.
-
-The availability of a logo for download **does not grant a license to use that logo commercially or for any other purpose**.
-
-For more information:
-
-**[FootyLogos — Logo Usage & Rights](https://www.footylogos.com/logo-usage-right)**
-
-See also: [`THIRD_PARTY_NOTICE.txt`](THIRD_PARTY_NOTICE.txt)
-
----
-
-## 📦 Releases
-
-### v1.0.2 — Initial Public Release
-
-- Country and league selection
-- SVG logo downloading
-- Turkish / English UI
-- Unicode filename support
-- Country + league folder naming
-- Existing-file detection
-- Startup loading indicator
-- No API key required
-
-**[View all releases →](https://github.com/ozkancantasarim/football-logo-downloader/releases)**
+The resulting hash should match the value published with the same release.
 
 ---
 
 <details>
-<summary><strong>🇹🇷 Türkçe</strong></summary>
+<summary><strong>Build from source</strong></summary>
 
 <br>
 
-## Football Logo Downloader nedir?
+The project is built with **C# / .NET 10 / WPF**.
 
-Football Logo Downloader, grafik tasarımcıların futbol kulübü logolarını tek tek aramak yerine **ülke ve lig seçerek SVG formatında indirebilmesi** için hazırlanmış Windows aracıdır.
+Install the .NET 10 SDK on Windows, then run:
 
-### Özellikler
+```text
+build-local.cmd
+```
 
-- Ülke → lig seçimi
-- Yalnızca seçilen ligin logolarını indirir
-- SVG vektör formatı
-- Türkçe / İngilizce arayüz
-- Türkçe ve özel karakter desteği
-- API anahtarı gerektirmez
-- Daha önce indirilmiş geçerli SVG dosyalarını tekrar indirmez
+A successful developer build produces:
 
-### Kullanım
+```text
+publish\Football Logo Downloader.exe
+publish\LICENSE.txt
+publish\THIRD_PARTY_NOTICE.txt
+publish\SHA256SUMS.txt
+release\Football-Logo-Downloader-v2.0.0-win-x64.zip
+```
 
-1. **[Releases](https://github.com/ozkancantasarim/football-logo-downloader/releases/latest)** sayfasından son sürümü indirin.
-2. ZIP dosyasını klasöre çıkarın.
-3. `Football Logo Downloader v1.0.2.bat` dosyasını çalıştırın.
-4. Ülke ve ligi seçin.
-5. Kayıt klasörünü belirleyin.
-6. **SVG Logoları İndir** butonuna basın.
+The released application itself does not launch PowerShell. `build-local.cmd` uses PowerShell only as a developer build helper for checksum generation and ZIP packaging.
 
-### Haklar
-
-Logo/veri kaynağı **FootyLogos.com**'dur.
-
-Bu proje FootyLogos ile bağlantılı değildir ve FootyLogos tarafından desteklenmemekte veya onaylanmamaktadır.
-
-Kulüp, lig, federasyon ve turnuva logoları ilgili hak sahiplerine aittir. Bir logonun indirilebilir olması, kullanım lisansı verildiği anlamına gelmez.
+The repository also includes GitHub Actions for Windows builds, CodeQL scanning, NuGet vulnerability auditing and Dependabot monitoring.
 
 </details>
+
+---
+
+## Source & Third-Party Rights
+
+Logo/data source: **[FootyLogos.com](https://www.footylogos.com/)**.
+
+This project is **not affiliated with, endorsed by, sponsored by, or officially connected with FootyLogos**.
+
+Football club, federation, league and competition names, logos, badges, crests and trademarks remain the property of their respective rights holders. The availability of a logo for download does **not** grant a license to use that logo or trademark.
+
+See:
+
+- [`THIRD_PARTY_NOTICE.txt`](THIRD_PARTY_NOTICE.txt)
+- [FootyLogos — Logo Usage & Rights](https://www.footylogos.com/logo-usage-right)
+
+---
+
+## Version History
+
+See [`CHANGELOG.md`](CHANGELOG.md).
+
+---
+
+## License
+
+The Football Logo Downloader source code is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
+
+The MIT License applies to the application source code only. It does not grant rights to third-party football logos, names, badges, crests or trademarks downloaded through the application.
 
 ---
 
@@ -233,6 +178,6 @@ Kulüp, lig, federasyon ve turnuva logoları ilgili hak sahiplerine aittir. Bir 
 
 Made for football designers.
 
-**Football Logo Downloader v1.0.2**
+**Football Logo Downloader v2.0.0**
 
 </div>

@@ -1,0 +1,29 @@
+<Application x:Class="FootballLogoDownloader.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="AppFont">Segoe UI</FontFamily>
+        <SolidColorBrush x:Key="WindowBrush" Color="#0B0F14"/>
+        <SolidColorBrush x:Key="TitleBarBrush" Color="#0B0F14"/>
+        <SolidColorBrush x:Key="CardBrush" Color="#111821"/>
+        <SolidColorBrush x:Key="InputBrush" Color="#0E151E"/>
+        <SolidColorBrush x:Key="PopupBrush" Color="#111821"/>
+        <SolidColorBrush x:Key="TextBrush" Color="#F6F8FB"/>
+        <SolidColorBrush x:Key="MutedBrush" Color="#93A4B8"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#243142"/>
+        <SolidColorBrush x:Key="HoverBrush" Color="#1A2635"/>
+        <SolidColorBrush x:Key="SelectedBrush" Color="#20365A"/>
+        <SolidColorBrush x:Key="TrackBrush" Color="#182231"/>
+        <SolidColorBrush x:Key="LogBrush" Color="#0B1119"/>
+        <SolidColorBrush x:Key="SuccessBgBrush" Color="#10251E"/>
+        <SolidColorBrush x:Key="SuccessBorderBrush" Color="#1E4A39"/>
+        <SolidColorBrush x:Key="SuccessIconBgBrush" Color="#17362B"/>
+        <SolidColorBrush x:Key="SuccessActionBgBrush" Color="#153127"/>
+        <SolidColorBrush x:Key="SuccessActionHoverBrush" Color="#1B4032"/>
+        <SolidColorBrush x:Key="SuccessActionBorderBrush" Color="#2B654E"/>
+        <SolidColorBrush x:Key="SuccessBrush" Color="#6FE2AD"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#4F8CFF"/>
+        <SolidColorBrush x:Key="AccentSoftBrush" Color="#8BB5FF"/>
+    </Application.Resources>
+</Application>

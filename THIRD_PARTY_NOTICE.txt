@@ -1,21 +1,25 @@
 THIRD-PARTY NOTICE
+Football Logo Downloader v2.0.0
 
-Football Logo Downloader v1.0.2
+Football Logo Downloader is a downloader application. The application package
+and source repository do not bundle football club, federation, league or
+competition logo files as part of the software.
 
-This package contains downloader code only. It does not include football club,
-competition, federation, or league logo files.
-
-Logo/data source:
+Logo/data source used at runtime:
 FootyLogos.com
 
-This project is not affiliated with, endorsed by, sponsored by, or officially
-connected with FootyLogos.
+Football Logo Downloader is an independent project and is not affiliated with,
+endorsed by, sponsored by, or officially connected with FootyLogos.
 
-Club, competition, federation and league names, logos and trademarks remain
-the property of their respective rights holders.
+Football club, federation, league and competition names, logos, badges, crests
+and trademarks remain the property of their respective rights holders.
 
-Download availability does not constitute a license to use any third-party
-logo, trademark, badge, crest, or other protected mark.
+The availability of a logo for download does not constitute or grant a license
+to use, reproduce, publish, distribute or commercially exploit any third-party
+logo, trademark, badge, crest or other protected mark.
 
-For information about logo usage and rights:
+Use of downloaded third-party marks remains subject to applicable permissions,
+licenses and law.
+
+FootyLogos logo usage and rights information:
 https://www.footylogos.com/logo-usage-right
